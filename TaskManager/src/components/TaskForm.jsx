@@ -3,8 +3,8 @@ import React, { useState } from 'react'
 const TaskForm = ({handleTaskUpdate}) => {
     const [title,setTitle] = useState("")
     const [category,setCategory] = useState("");
-    const handleSubmit = (e) => {
-        e.preventDefault(); 
+    const handleSubmit = (task) => {
+        task.preventDefault(); 
 
         handleTaskUpdate({
             title : title.trim(),
